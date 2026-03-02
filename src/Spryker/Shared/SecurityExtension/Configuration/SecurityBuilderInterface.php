@@ -81,8 +81,5 @@ interface SecurityBuilderInterface
      */
     public function addEventSubscriber(callable $eventSubscriber);
 
-    /**
-     * @return \Spryker\Shared\SecurityExtension\Configuration\SecurityConfigurationInterface
-     */
     public function getConfiguration(): SecurityConfigurationInterface;
 }

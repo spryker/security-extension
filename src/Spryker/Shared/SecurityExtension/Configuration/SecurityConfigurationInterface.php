@@ -9,19 +9,10 @@ namespace Spryker\Shared\SecurityExtension\Configuration;
 
 interface SecurityConfigurationInterface
 {
-    /**
-     * @return array
-     */
     public function getFirewalls(): array;
 
-    /**
-     * @return array
-     */
     public function getAccessRules(): array;
 
-    /**
-     * @return array
-     */
     public function getRoleHierarchies(): array;
 
     /**
@@ -44,8 +35,5 @@ interface SecurityConfigurationInterface
      */
     public function getAccessDeniedHandlers(): array;
 
-    /**
-     * @return array
-     */
     public function getEventSubscribers(): array;
 }
