@@ -4,25 +4,34 @@
     "description": "SecurityExtension module",
     "license": "proprietary",
     "require": {
-        "php": ">=8.3"
+        "php": ">=8.3",
+        "spryker/transfer": "^3.27.0"
     },
     "require-dev": {
         "spryker/code-sniffer": "*",
-        "spryker/container": "*"
+        "spryker/container": "*",
+        "spryker/symfony": "*",
+        "spryker/testify": "*"
     },
     "suggest": {
-        "spryker/container": "Add this module to use the Container."
+        "spryker/container": "Add this module to use the Container.",
+        "spryker/symfony": "Add this module to have SecurityOwnershipFactsProviderPluginInterface implementations tagged for the permission voter."
     },
     "autoload": {
         "psr-4": {
             "Spryker\\": "src/Spryker/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "SprykerTest\\": "tests/SprykerTest/"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "cs-check": "phpcs -p -s --standard=vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml src/",
-        "cs-fix": "phpcbf -p --standard=vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml src/"
+        "cs-check": "phpcs -p -s --standard=vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml src/ tests/",
+        "cs-fix": "phpcbf -p --standard=vendor/spryker/code-sniffer/SprykerStrict/ruleset.xml src/ tests/"
     },
     "extra": {
         "branch-alias": {

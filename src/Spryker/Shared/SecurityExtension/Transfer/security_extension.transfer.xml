@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+
+    <transfer name="SecuritySubject" strict="true">
+        <property name="type" type="string"/>
+        <property name="reference" type="string"/>
+        <property name="customerReference" type="string"/>
+    </transfer>
+
+    <transfer name="SecurityGrant" strict="true">
+        <property name="identifier" type="string"/>
+        <property name="effect" type="string"/>
+    </transfer>
+
+    <transfer name="SecurityGrantCollection" strict="true">
+        <property name="grants" type="SecurityGrant[]" singular="grant"/>
+    </transfer>
+
+    <transfer name="SecurityOwnershipFactsRequest" strict="true">
+        <property name="objectType" type="string" description="Object type the operation declares, e.g. order or cart."/>
+        <property name="objectReference" type="string" description="Reference of the addressed object, read from the declared URI variable."/>
+        <property name="subject" type="SecuritySubject"/>
+    </transfer>
+
+    <transfer name="SecurityOwnershipContext" strict="true">
+        <property name="ownerCustomerReference" type="string"/>
+        <property name="sharedAccess" type="string"/>
+        <property name="companyUuid" type="string"/>
+        <property name="companyBusinessUnitUuid" type="string"/>
+    </transfer>
+
+    <transfer name="SecurityPermissionLink" strict="true">
+        <property name="contentTypeIdentifier" type="string"/>
+        <property name="operationPattern" type="string"/>
+    </transfer>
+
+    <transfer name="SecurityPermissionLinkCollection" strict="true">
+        <property name="links" type="SecurityPermissionLink[]" singular="link"/>
+    </transfer>
+
+</transfers>
